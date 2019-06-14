@@ -43,6 +43,7 @@ module.exports = {
       //     ['^' + process.env.VUE_APP_BASE_API]: ''
       //   }
       // }
+      // http://localhost:8080/api/user =>192.168.31.237:8080/user
       '/api': {
         target: '192.168.31.237:8080',
         pathRewrite: {
