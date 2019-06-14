@@ -3,7 +3,7 @@ import axios from 'axios'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
 
-const baseUrl = 'http://127.0.0.1:8080' // http://192.168.31.237:8080
+const baseUrl = '/api' // http://192.168.31.237:8080
 // create an axios instance
 // process.env.VUE_APP_BASE_API
 const service = axios.create({
