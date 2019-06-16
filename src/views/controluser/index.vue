@@ -117,7 +117,7 @@
       </el-dialog>
       <el-dialog title="警告"
                  :visible.sync="centerDialogVisible"
-                 width="30%"
+                 width="400px"
                  center>
         <span>你将要删除用户{{ username }}</span>
         <span slot="footer"

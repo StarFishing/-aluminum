@@ -39,10 +39,15 @@
         </template>
       </el-table-column>
     </el-table>
+    <Limits ref="limits" />
   </div>
 </template>
 <script>
+import Limits from '@/components/Limits'
 export default {
+  components: {
+    Limits
+  },
   data() {
     return {
       rolesList: [
@@ -57,8 +62,13 @@ export default {
   methods: {
     handleEdit(scope) {
       console.log(scope.row.name)
+      this.$refs.limits.isshow(true)
     },
     handleDelete(cope) {
+      this.$message({
+        message: '删除成功',
+        type: 'success'
+      })
       console.log('delet')
     }
   }
