@@ -108,9 +108,9 @@
                       style="width: 200px;" />
           </el-form-item>
           <el-form-item>
-            <el-button type="primary"
-                       @click="submitForm('ruleForm')">创建用户</el-button>
             <el-button @click="resetForm('ruleForm')">取消</el-button>
+            <el-button type="primary"
+                       @click="submitForm('ruleForm')">{{editorflag?'确认':'创建用户'}}</el-button>
           </el-form-item>
         </el-form>
 

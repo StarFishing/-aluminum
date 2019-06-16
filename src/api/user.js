@@ -2,15 +2,8 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: '/oauth/token',
+    url: '/user/login',
     method: 'post',
-    auth: {
-      username: 'OAUTH_CLIENT_ID',
-      password: 'OAUTH_CLIENT_SECRET'
-    },
-    headers: {
-      'content-type': 'application/x-www-form-urlencoded'
-    },
     data
   })
 }

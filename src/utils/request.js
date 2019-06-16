@@ -3,11 +3,11 @@ import axios from 'axios'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
 
-const baseUrl = '/api' // http://192.168.31.237:8080
+// const baseUrl = '/api' // http://192.168.31.237:8080
 // create an axios instance
 // process.env.VUE_APP_BASE_API
 const service = axios.create({
-  baseURL: baseUrl, // url = base url + request url
+  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })

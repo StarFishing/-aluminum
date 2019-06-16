@@ -64,23 +64,23 @@ export const constantRoutes = [
     meta: { title: '模型资源管理', icon: 'dashboard' },
     children: [
       {
-        path: 'basemanage',
-        component: () => import('@/views/dashboard/basemanage/index'),
-        name: 'basemanage',
-        meta: { title: '基础管理', icon: '文件' }
+        path: 'filesearch',
+        component: () => import('@/views/dashboard/filesearch/index'),
+        name: 'filesearch',
+        meta: { title: '文件查看', icon: '文件' }
       },
       {
         path: 'uploadFile',
         component: () => import('@/views/dashboard/uploadFile/index'),
         name: 'upload',
         meta: { title: '上传', icon: '上传' }
-      },
-      {
-        path: 'previewFile',
-        component: () => import('@/views/dashboard/preview/index'),
-        name: 'preview',
-        meta: { title: '文件查看', icon: '文件' }
       }
+      // {
+      //   path: 'previewFile',
+      //   component: () => import('@/views/dashboard/preview/index'),
+      //   name: 'preview',
+      //   meta: { title: '搜索', icon: '文件' }
+      // }
     ]
   },
   {
