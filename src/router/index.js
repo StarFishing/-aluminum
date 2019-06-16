@@ -201,12 +201,6 @@ export const asyncRoutes = [
     meta: { title: 'Test', icon: 'dashboard', roles: ['admin'] },
     children: [
       {
-        path: 'basemanage',
-        component: () => import('@/views/dashboard/basemanage/index'),
-        name: 'base',
-        meta: { title: '基础管理', icon: '文件' }
-      },
-      {
         path: 'uploadFile',
         component: () => import('@/views/dashboard/uploadFile/index'),
         name: 'up',

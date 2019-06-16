@@ -1,5 +1,6 @@
 <template>
-  <div class="passwordWrapper">
+  <div v-if="passwordDialog"
+       class="passwordWrapper">
 
     <el-dialog title="修改密码"
                :visible.sync="passwordDialog"
