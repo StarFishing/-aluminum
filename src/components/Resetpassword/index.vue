@@ -1,25 +1,40 @@
 <template>
   <div class="passwordWrapper">
 
-    <el-dialog
-      title="修改密码"
-      :visible.sync="passwordDialog"
-      width="400px"
-    >
-      <div slot="title" class="header-title" style="pading: 0 10px">
-        <i class="el-icon-info" style="color:#E6A23C" />
+    <el-dialog title="修改密码"
+               :visible.sync="passwordDialog"
+               width="400px">
+      <div slot="title"
+           class="header-title"
+           style="pading: 0 10px">
+        <i class="el-icon-info"
+           style="color:#E6A23C" />
         <span style="margin-left:20px">修改密码</span>
       </div>
-      <el-form ref="ruleForm" :model="ruleForm" status-icon :rules="rules" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="密码" prop="pass">
-          <el-input v-model="ruleForm.pass" type="password" autocomplete="off" />
+      <el-form ref="ruleForm"
+               :model="ruleForm"
+               status-icon
+               :rules="rules"
+               label-width="80px"
+               class="demo-ruleForm">
+        <el-form-item label="密码"
+                      prop="pass">
+          <el-input v-model="ruleForm.pass"
+                    type="password"
+                    autocomplete="off" />
         </el-form-item>
-        <el-form-item label="确认密码" prop="checkPass">
-          <el-input v-model="ruleForm.checkPass" type="password" autocomplete="off" />
+        <el-form-item label="确认密码"
+                      prop="checkPass">
+          <el-input v-model="ruleForm.checkPass"
+                    type="password"
+                    autocomplete="off" />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" :loading="loading" @click="submitForm('ruleForm')">确认</el-button>
           <el-button @click="resetForm('ruleForm')">取消</el-button>
+          <el-button type="primary"
+                     :loading="loading"
+                     @click="submitForm('ruleForm')">确认</el-button>
+
         </el-form-item>
       </el-form>
     </el-dialog>
@@ -106,3 +121,16 @@ export default {
   }
 }
 </script>
+<style>
+.passwordWrapper .el-dialog__body {
+  padding: 30px 40px;
+  color: #606266;
+  font-size: 14px;
+}
+.passwordWrapper .el-form-item__label {
+  text-align: center;
+}
+.passwordWrapper .el-form-item__content {
+  text-align: center;
+}
+</style>
