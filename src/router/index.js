@@ -230,6 +230,18 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/upload',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'upload',
+        component: () => import('@/components/upload/index'),
+        meta: { title: '文件上传测试', icon: '用户', roles: ['admin'] }
+      }
+    ]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
